@@ -1,0 +1,98 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#body {
+    height: 100vh;
+    display: flex;
+    background: #36393F;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial;
+}
+
+.home-area {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+}
+
+#start {
+    position: absolute;
+    background: grey;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    font-size: 21px;
+    background: limegreen;
+}
+
+#img1, #img2 {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.chat {
+    margin-top: 50px;
+    z-index: -5;
+}
+
+.logo-holder {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    animation: anim 5s infinite linear;
+}
+
+.pijojo {
+    right: 20px;
+    top: 20px;
+    position:absolute;
+    z-index:-100;
+}
+
+.pijojo2 {
+    left: 20px;
+    top: 20px;
+    position:absolute;
+    z-index:-100;
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}

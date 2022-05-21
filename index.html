@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6804272/781004/css/fonts.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Pierdolony gank swierzakuf?!</title>
+</head>
+<body id="body">
+
+	<!-- Nic tu niema, spierdalaj! -->
+
+	<div id="start">
+		<button class="btn" onclick="start()">Kliknij aby zobaczyć co się stało z Region Roleplay!</button>
+	</div>
+
+	<div class="home-area" id="particles-js"></div>
+
+	<div class="logo-holder">
+		<img class="logo" src="logo.png">
+	</div>
+
+	<div class="main">
+		<h1 id="howold"></h1>
+		<h3 id="days"></h3> 
+	</div>
+
+	<div class="pijojo">
+		<img id="mrpijojo2" src="mrpijojo2.png" style="height:300px";> 
+	</div>
+
+	<div class="pijojo2">
+		<img id="mrpijojo3" src="mrpijojo3.png" style="height:300px";> 
+	</div>
+
+	<div class="chat">
+		<img id="img1" src="img1.png">
+		<br>
+		<img id="img2" src="img2.png">
+	</div>
+
+	<audio id="audio" src="fijodorek_fijojo_guwno.mp3" loop></audio>
+
+	<script>
+
+    var release = 1643292000 * 1000;
+    var now = new Date();
+    var diff = Math.round((now.getTime() - release) / (1000 * 60 * 60 * 24));
+    
+    var years = Math.floor(diff / 365.256363004);
+    var days = Math.floor(diff % 365.256363004);
+    var months = Math.floor(days / 30.438);
+    days = days % 30;
+    months = months + " miesięcy";
+    if (days > 0) {
+        days = " i " + days + " dni";
+    } else {
+        days = "";
+    }
+		
+    if (years > 1) {
+		years = years + " lata ";
+    } else if (years >= 0) {
+		years = ""
+	} else {
+		years = years + " rok ";
+    }	
+		
+		document.getElementById("howold").innerText = "Region Roleplay nie żyje już " + years + months + days;
+		document.getElementById("days").innerText = "(" + diff + " dni)";
+
+		function show() {
+			setTimeout(() => {
+				document.getElementById("body").style.opacity = 1;
+			}, 500);
+		}
+
+		show();
+
+		function start() {
+			document.getElementById("start").style.opacity = 0;
+			document.getElementById("audio").play();
+			document.getElementById("audio").volume = 0.04;
+			setTimeout(() => {
+				document.getElementById("img1").style.opacity = 1;
+				new Audio("joincall_sound.mp3").play();
+				setTimeout(() => {
+					document.getElementById("img2").style.opacity = 1;
+					new Audio("discord-notification.mp3").play();
+				}, 3500);
+			}, 3500);
+		}
+
+	</script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/particles.js"></script>
+	<script src="js/app.js"></script>
+
+	<!-- SzybkiRito says: Pierdolony gang świeżaków!? -->
+	<!-- CzłonekGanguSwiezakow says: Jak rozjebałem serwer Region Roleplay https://www.youtube.com/watch?v=96l_sKsayaI -->
+	
+	
+</body>
+</html>
