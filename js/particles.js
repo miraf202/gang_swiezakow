@@ -1469,6 +1469,10 @@ function isInArray(value, array) {
   return array.indexOf(value) > -1;
 }
 
+/*
+SzybkiRito says: Pierdolony gang świeżaków!?
+CzłonekGanguSwiezakow says: Jak rozjebałem serwer Region Roleplay https://www.youtube.com/watch?v=96l_sKsayaI
+*/
 
 /* ---------- particles.js functions - start ------------ */
 
