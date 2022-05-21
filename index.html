@@ -53,7 +53,14 @@
     var days = Math.floor(diff % 365.256363004);
     var months = Math.floor(days / 30.438);
     days = days % 30;
-    months = months + " miesięcy";
+    
+    if (months = 1){
+	months = months + " miesiąc";
+    } else if (months >= 4){
+        months = months + " miesiące";
+    } else {
+	months = months + " miesięcy";
+    }
     if (days > 0) {
         days = " i " + days + " dni";
     } else {
