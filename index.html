@@ -63,12 +63,14 @@
 		
     if (isNaN(months)){
 		months = "";
-	} else if (months == 1){
-		months = months + " miesiąc";
-    } else if (months <= 4){
-        months = months + " miesiące";
-    } else {
-		months = months + " miesięcy";
+	} else {
+		if (months == 1){
+			months = months + " miesiąc";
+    	} else if (months <= 4){
+        	months = months + " miesiące";
+    	} else {
+			months = months + " miesięcy"'
+		}
     }
     if (days > 0) {
         days = " i " + days + " dni";
