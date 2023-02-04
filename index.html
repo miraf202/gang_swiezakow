@@ -62,11 +62,11 @@
     days = days % 30;
     
     if (months == 1){
-	months = months + " miesiąc";
+		months = months + " miesiąc";
+	} else if (isNaN(months)){
+		months = "";
     } else if (months <= 4){
         months = months + " miesiące";
-    } else if (isNaN(months)){
-		months = "";
     } else {
 		months = months + " miesięcy";
     }
