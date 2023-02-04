@@ -65,10 +65,10 @@
 	months = months + " miesiąc";
     } else if (months <= 4){
         months = months + " miesiące";
-    } else if (months == NaN){
-	months = "";
+    } else if (isNaN(months)){
+		months = "";
     } else {
-	months = months + " miesięcy";
+		months = months + " miesięcy";
     }
     if (days > 0) {
         days = " i " + days + " dni";
